@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Mantenimiento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Sistema de Mantenimiento</h1>
+  </header>
+  
+  <main>
+    <section id="form-section">
+      <h2>Registrar Mantenimiento</h2>
+      <form id="maintenance-form">
+        <label for="type">Tipo de Mantenimiento:</label>
+        <select id="type" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Preventivo">Preventivo</option>
+          <option value="Correctivo">Correctivo</option>
+        </select>
+        
+        <label for="description">Descripción:</label>
+        <textarea id="description" placeholder="Describe la tarea" required></textarea>
+        
+        <label for="date">Fecha Programada:</label>
+        <input type="date" id="date" required>
+        
+        <button type="submit">Registrar</button>
+      </form>
+    </section>
+    
+    <section id="list-section">
+      <h2>Lista de Mantenimientos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="maintenance-list">
+          <!-- Las tareas se agregarán dinámicamente aquí -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
 
